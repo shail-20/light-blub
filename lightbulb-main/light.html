@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+}
+.btn{
+    padding: 20px;
+    height: 10px;
+    font-style: italic;
+    background-color: yellow;
+}
+    </style>
+</head>
+<body style ="background-color: black;">
+   
+    <img id="bulb" src="https://st.depositphotos.com/1020618/2357/i/600/depositphotos_23575953-stock-photo-light-off.jpg"alt="" class="center">
+    <button id="toggleBtn" class="center btn">
+        TUrN ON
+    </button> 
+
+    <script>
+        let btn = document.getElementById('toggleBtn')
+        let bulb = document.getElementById('bulb')
+        btn.addEventListener('click',toggleBulb)
+
+        function toggleBulb(e)
+                {
+                if(btn.textContent.includes('on'))
+                {
+            
+                bulb.src ="https://st.depositphotos.com/1020618/2357/i/600/depositphotos_23575953-stock-photo-light-off.jpg"
+                btn.textContent="Turn ON"
+                }
+                else
+               {
+                bulb.src ="https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?cs=srgb&dl=pexels-led-supermarket-577514.jpg&fm=jpg"
+                btn.textContent="TURn OFF"
+
+               }
+               }
+    </script>
+
+</body>
+</html>
